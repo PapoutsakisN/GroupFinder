@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color:#EBEBEB;
+	}
+p.Path{ font-family:Calibri;
+font-size:10px;
+color:#CF3F41;
+}
+p.Path1{ font-family:Calibri;
+font-size:10px;
+color:#CF3F41;
+text-decoration:underline
+}
+button.button{
+	background-color:#F7A42C;
+	font-family:Calibri;
+	font-size:12px;
+}
+p.infomails{ 
+font-family:Calibri;
+font-size: 18px;
+}
+p.question{ 
+font-family:Calibri;
+font-size:18px;
+text-decoration:none;
+}
+p.answer{ font-family:Calibri;
+font-size: 16px;
+}
+p.info{ 
+font-family:Calibri;
+font-size:14px; 
+color:#646464
+}
+
+}
+p.note{ 
+font-family:Calibri;
+font-size:18px;
+}
+h3.head{ 
+font-family:Calibri;
+align-self:center
+}
+h4.head{ 
+font-family:Calibri;
+}
+form.edit{ 
+font-family:Calibri;
+font-size:18px;
+}
+form.edit2{ 
+font-family:Calibri;
+font-size:18px;
+align-self:center
+}
+form.edit3{
+	font-family:Calibri;
+	align-self:flex-end;
+ 
+	}

@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Profile Passed Subjects</title>
+<img src="Logo.jpg" >
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+ <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+span.tab{
+	 display: block;
+    width: 480px;
+	color:black;
+	text-align:right;
+	background-color:#F7F7F7;
+    padding: 4px;
+
+	}
+a.tab:link, a.tab:visited {
+    display: block;
+    width: 144px;
+    font-weight: bold;
+    color: black;
+	background-color:#F7F7F7;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a.tab1:link, a.tab1:visited {
+    display: block;
+    width: 70px;
+    font-weight: bold;
+    color: orange;
+	background-color:#F7F7F7;
+    text-align: right;
+    padding: 4px;
+    text-decoration: none;
+}
+
+a.tab:hover, a.tab:active {
+    background-color: #E89000;
+	color:white;
+}
+</style>
+   <ul>
+  <li><a class="tab" href="Projects.html">Projects</a></li>
+  <li><a class="tab" href="Profile.html">Profile</a></li>
+  <li><a class="tab" href="Mygroups.html">MyGroups</a></li>
+  <li><a class="tab" href="Notifications.html">Notifications</a></li>
+  <li><a class="tab" href="Help.html">Help</a></li>
+  
+  <li><span class="tab">Connected as:Papoutsakis N.</span></li>
+  <li><a class="tab1" href="../Index.html">Sign Out</a></li>
+</ul>
+
+
+
+
+
+<script>
+function function_done(){	
+	if(document.getElementById("checkbox_1").checked == false){
+		document.getElementById("example1").hidden = true;	
+		document.getElementById("grade_1").hidden = true;
+	}else {
+		document.getElementById("example1").hidden = false;
+		if(document.getElementById("checkbox_2").checked == false){
+			document.getElementById("grade_1").hidden = true;
+		}else{
+			document.getElementById("grade_1").hidden = false;
+		}
+	}
+	if(document.getElementById("checkbox_3").checked == false){
+		document.getElementById("example2").hidden = true;	
+		document.getElementById("grade_2").hidden = true;
+	}else {
+		document.getElementById("example2").hidden = false;	
+		if(document.getElementById("checkbox_4").checked == false){
+			document.getElementById("grade_2").hidden = true;
+		}else{
+			document.getElementById("grade_2").hidden = false;		
+		}
+	}
+	if(document.getElementById("checkbox_5").checked == false){
+		document.getElementById("example3").hidden = true;	
+		document.getElementById("grade_3").hidden = true;
+	}else {
+		document.getElementById("example3").hidden = false;
+		if(document.getElementById("checkbox_6").checked == false){
+			document.getElementById("grade_3").hidden = true;
+		}else{
+			document.getElementById("grade_3").hidden = false;
+		}
+	}
+	document.getElementById("vis1").hidden =true;
+	document.getElementById("vis2").hidden =true;
+	document.getElementById("vis3").hidden =true;
+	document.getElementById("vis4").hidden =true;
+	document.getElementById("vis5").hidden =true;
+	document.getElementById("vis6").hidden =true;
+	document.getElementById("checkbox_1").hidden =true;
+		document.getElementById("checkbox_2").hidden =true;
+		document.getElementById("checkbox_3").hidden =true;
+		document.getElementById("checkbox_4").hidden =true;
+		document.getElementById("checkbox_5").hidden =true;
+		document.getElementById("checkbox_6").hidden =true;
+	document.getElementById("edit").hidden =false;
+	document.getElementById("done").hidden =true;
+	}
+	
+	function function_edit(){
+		document.getElementById("vis1").hidden =false;
+		document.getElementById("vis2").hidden =false;
+		document.getElementById("vis3").hidden =false;
+		document.getElementById("vis4").hidden =false;
+		document.getElementById("vis5").hidden =false;
+		document.getElementById("vis6").hidden =false;
+		document.getElementById("checkbox_1").hidden =false;
+		document.getElementById("checkbox_2").hidden =false;
+		document.getElementById("checkbox_3").hidden =false;
+		document.getElementById("checkbox_4").hidden =false;
+		document.getElementById("checkbox_5").hidden =false;
+		document.getElementById("checkbox_6").hidden =false;
+		document.getElementById("grade_1").hidden =false;
+		document.getElementById("grade_2").hidden =false;
+		document.getElementById("grade_3").hidden =false;
+		document.getElementById("example1").hidden =false;
+		document.getElementById("example2").hidden =false;
+		document.getElementById("example3").hidden =false;
+
+		document.getElementById("done").hidden =false;
+		document.getElementById("edit").hidden=true;
+	
+	
+	}
+</script>
+</head>
+<p class="Path"><a  style="color:#D33639" href="Profile.html">Profile</a> > Passed Subjects</p>
+<button class="button"   onClick="function_edit()" id="edit">Edit</button>
+<h2 align="center">Passed  Subjects</h2>
+
+ <div id="vis1" hidden="true"> <input type="checkbox" id="checkbox_1" class="subjects"  name="visible" checked="checked" value="grade" hidden="true"/> visible subject </div>
+ <p class="question" id="example1">Avl Trees Projects:
+<br>Year of follow:2015<br>HY240b-Data Structures<br>Teacher:Fatourou Panagiota<br>Relavant File:http://www.csd.uoc.gr/`hy240b/current/exercises.php</p>
+<p class="question" id="grade_1">Grade: 7/10</p> 
+<div id="vis2" hidden="true"><input type="checkbox" name="visible" id="checkbox_2" checked="checked" value="grade" hidden="true"/> visible grade </div><br>
+
+
+
+<div id="vis3" hidden="true"><input type="checkbox" name="visible" checked="checked" id="checkbox_3" value="grade" hidden="true"/>visible</div>
+<p class="question" id="example2">Web Design  Project:
+<br>Year of follow:2015<br>HY464-Human_computer Interaction<br>Teacher:Stefanidis konstadinos<br>Relavant File:http://www.csd.uoc.gr/`hy464/current/exercises.php<br></p>
+<p class="question" id="grade_2">Grade:8,5/10</p>
+<div id="vis4" hidden="true"><input type="checkbox" name="visible" checked="checked" value="grade" id="checkbox_4" hidden="true"/>visible</div><br>
+
+<div id="vis5" hidden="true"><input type="checkbox" id="checkbox_5" name="visible" checked="checked" value="grade" hidden="true"/>visible subject </div>
+<p class="question" id="example3">Web Design  Project!!!!!!:<br>Year of follow:2015<br>HY464-Human_computer Interaction<br>Teacher:Stefanidis konstadinos<br>Relavant File:http://www.csd.uoc.gr/`hy464/current/exercises.php<br></p>
+<p class="question" id="grade_3">Grade:8,5/10</p>
+<div id="vis6" hidden="true"><input type="checkbox" id="checkbox_6" name="visible" checked="checked" value="grade" hidden/>visible grade</div><br>
+<body>
+<button class="button"  onClick="function_done()" id="done" hidden="true">Done</button>
+
+</body>
+</html>

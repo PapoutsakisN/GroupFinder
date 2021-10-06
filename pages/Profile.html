@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Profile Edit</title>
+<img src="Logo.jpg" >
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+ <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+span.tab{
+	 display: block;
+    width: 480px;
+	color:black;
+	text-align:right;
+	background-color:#F7F7F7;
+    padding: 4px;
+
+	}
+	span.block{
+	 display: block;
+    width: 333px;
+	text-align:left;
+    padding: 4px;
+
+	}
+a.tab:link, a.tab:visited {
+    display: block;
+    width: 144px;
+    font-weight: bold;
+    color: black;
+	background-color:#F7F7F7;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a.tab1:link, a.tab1:visited {
+    display: block;
+    width: 70px;
+    font-weight: bold;
+    color: orange;
+	background-color:#F7F7F7;
+    text-align: right;
+    padding: 4px;
+    text-decoration: none;
+}
+
+a.tab:hover, a.tab:active {
+    background-color: #E89000;
+	color:white;
+}
+</style>
+   <ul>
+  <li><a class="tab" href="Projects.html">Projects</a></li>
+  <li><a class="tab" href="Profile.html">Profile</a></li>
+  <li><a class="tab" href="Mygroups.html">MyGroups</a></li>
+  <li><a class="tab" href="Notifications.html">Notifications</a></li>
+  <li><a class="tab" href="Help.html">Help</a></li>
+  
+  <li><span class="tab">Connected as:Papoutsakis N.</span></li>
+  <li><a class="tab1" href="../Index.html">Sign Out</a></li>
+</ul>
+
+
+</head>
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+  <script>
+  function done(){
+	  document.getElementById("addItem1").hidden = true;
+	  document.getElementById("add1").hidden = true;
+	  document.getElementById("remove1").hidden = true;
+	  	  document.getElementById("addItem2").hidden = true;
+	  document.getElementById("add2").hidden = true;
+	  document.getElementById("remove2").hidden = true;
+	  	  document.getElementById("addItem3").hidden = true;
+	  document.getElementById("add3").hidden = true;
+	  document.getElementById("remove3").hidden = true;
+	  	  document.getElementById("addItem4").hidden = true;
+	  document.getElementById("add4").hidden = true;
+	  document.getElementById("remove4").hidden = true;
+	  	  document.getElementById("addItem5").hidden = true;
+	  document.getElementById("add5").hidden = true;
+	  document.getElementById("remove5").hidden = true;
+	  document.getElementById("done").hidden = true;
+	  document.getElementById("edit").hidden = false;
+	  document.getElementById("mySelect1").disabled = true;
+	  document.getElementById("mySelect2").disabled = true;
+	  document.getElementById("mySelect3").disabled = true;
+	  document.getElementById("mySelect4").disabled = true;
+	  document.getElementById("mySelect5").disabled = true;
+		  document.getElementById("pas").hidden = false;
+	  }
+	    function edit(){
+	  document.getElementById("addItem1").hidden = false;
+	  document.getElementById("add1").hidden = false;
+	  document.getElementById("remove1").hidden = false;
+	  	  document.getElementById("addItem2").hidden = false;
+	  document.getElementById("add2").hidden = false;
+	  document.getElementById("remove2").hidden = false;
+	  	  document.getElementById("addItem3").hidden = false;
+	  document.getElementById("add3").hidden = false;
+	  document.getElementById("remove3").hidden = false;
+	  	  document.getElementById("addItem4").hidden = false;
+	  document.getElementById("add4").hidden = false;
+	  document.getElementById("remove4").hidden = false;
+	  	  document.getElementById("addItem5").hidden = false;
+	  document.getElementById("add5").hidden = false;
+	  document.getElementById("remove5").hidden = false;
+	  document.getElementById("done").hidden = false;
+	  document.getElementById("edit").hidden = true;
+	  document.getElementById("mySelect1").disabled = false;
+	  	  document.getElementById("mySelect2").disabled = false;
+		  document.getElementById("mySelect3").disabled = false;
+		  document.getElementById("mySelect4").disabled = false;
+		  document.getElementById("mySelect5").disabled = false;
+		  document.getElementById("pas").hidden = true;
+	  }
+  </script>
+  <script>
+  	function addListItem(flag) {
+		if(flag == 1){
+  			var string=document.getElementById("addItem1").value;
+			var myList = document.getElementById("mySelect1");
+			document.getElementById("addItem1").value="";
+			$("#mySelect1").append('<option>' + string + '</option>').listview("refresh");
+myList.innerHTML = '';
+			$("#mySelect1").append('<option>' + string + '</option>').listview("refresh");
+		}
+		if(flag == 2){
+  			var string=document.getElementById("addItem2").value;
+			var myList = document.getElementById("mySelect2");
+			document.getElementById("addItem2").value="";
+		$("#mySelect2").append('<option>' + string + '</option>').listview("refresh");
+myList.innerHTML = '';
+			$("#mySelect2").append('<option>' + string + '</option>').listview("refresh");
+		}
+		if(flag == 3){
+  			var string=document.getElementById("addItem3").value;
+			var myList = document.getElementById("mySelect3");
+			document.getElementById("addItem3").value="";
+		$("#mySelect3").append('<option>' + string + '</option>').listview("refresh");
+myList.innerHTML = '';
+			$("#mySelect3").append('<option>' + string + '</option>').listview("refresh");
+		}
+		if(flag == 4){
+  			var string=document.getElementById("addItem4").value;
+			var myList = document.getElementById("mySelect4");
+			document.getElementById("addItem4").value="";
+		$("#mySelect4").append('<option>' + string + '</option>').listview("refresh");
+myList.innerHTML = '';
+			$("#mySelect4").append('<option>' + string + '</option>').listview("refresh");
+		}
+		if(flag == 5){
+  			var string=document.getElementById("addItem5").value;
+			var myList = document.getElementById("mySelect5");
+			document.getElementById("addItem5").value="";
+			$("#mySelect5").append('<option>' + string + '</option>').listview("refresh");
+myList.innerHTML = '';
+			$("#mySelect5").append('<option>' + string + '</option>').listview("refresh");
+		}
+			$("#mySelect").append('<option>' + string + '</option>').listview("refresh");
+myList.innerHTML = '';
+			$("#mySelect").append('<option>' + string + '</option>').listview("refresh");
+
+  	} 
+  </script>
+  <script>
+function myFunction(flag) {
+	if(flag==1){
+    var x = document.getElementById("mySelect1");
+	}
+	if(flag==2){
+    var x = document.getElementById("mySelect2");
+	}
+	if(flag==3){
+    var x = document.getElementById("mySelect3");
+	}
+	if(flag==4){
+    var x = document.getElementById("mySelect4");
+	}
+	if(flag==5){
+    var x = document.getElementById("mySelect5");
+	}
+	x.remove(x.selectedIndex);
+}
+</script>
+<body>
+<p class="Path"> Profile </p>
+
+<h3>Name:Papoutsakis Nikos</h3>
+<div align="right"><button class="button" id="edit" onClick="edit()">Edit</button><a href="profile_passed_subjects.html"><button id="pas" class="button" >Passed Subjects</button></a></div>
+
+        <form class="edit">
+Capabilities:<br>
+<select id="mySelect1" size="7" disabled>
+  <option>Java</option>
+  <option>C/C++</option>
+  <option>Wireshark</option>
+  <option>QtSpim</option>
+</select>
+</form>
+<br>  
+
+	<input type="text" size="40" class="form-control" hidden="true" id="addItem1" placeholder="Add new capability..." /><br>
+				<button class="button" type="submit" hidden="true" onclick="addListItem(1)" id="add1">Add</button>
+                <button class="button" onclick="myFunction(1)" hidden="true" id="remove1">Remove selected capability</button>
+     <ul>           
+ <li><span class="block">
+Places:
+<br>
+<select id="mySelect2" size="7" disabled>
+  <option>at my home</option>
+  <option>at the library</option>
+  <option>at the university</option>
+  <option>wherever</option>
+</select>
+<br> 
+
+	<input type="text" size="40" hidden="true" class="form-control" id="addItem2" placeholder="Add new place(e.g. at my place)" /><br>
+				<button class="button" hidden="true" type="submit" onclick="addListItem(2)" id="add2" >Add</button>
+                <button class="button" hidden="true" onclick="myFunction(2)" id="remove2">Remove selected place</button>
+                </span>
+                </li>
+                
+  <li><span class="block">
+Days
+<br>
+<select id="mySelect3" size="7" disabled>
+  <option>Friday</option>
+  <option>Monday</option>
+  <option>Tuesday</option>
+  <option>Sunday</option>
+</select>
+<br>  
+
+	<input type="text" size="40" class="form-control" hidden="true" id="addItem3" placeholder="Add new day(e.g. Monday or Monday-Sunday)" /><br>
+				<button class="button" hidden="true" type="submit" onclick="addListItem(3)" id="add3" >Add</button>
+                <button class="button" hidden="true" onclick="myFunction(3)" id="remove3">Remove selected day</button>
+</span></li>
+ <li><span class="block">
+Hours
+<br>
+<select id="mySelect4" size="7" disabled>
+  <option>14:00-18:00</option>
+  <option>10:00-12:00</option>
+  <option>15:00-18:00</option>
+  <option>20:00-22:00</option>
+</select>
+<br>  
+	<input hidden="true" type="text" size="40" class="form-control" id="addItem4" placeholder="Add new hour(e.g. 00:00-11:11)" /><br>
+				<button hidden="true" class="button" type="submit" onclick="addListItem(4)" id="add4" >Add</button>
+<button hidden="true" class="button" onclick="myFunction(4)" id="remove4">Remove selected hour</button>
+<br>
+</span></li>
+</ul>
+ <form class="edit">
+Contact Information
+<br>
+<select id="mySelect5" size="7" disabled>
+  <option >Facebook: Pap Nikos</option>
+  <option>Gmail: papoutsakis@gmail.com</option>
+  <option>twitter: Nik P</option>
+  <option>Skype: Nikos Papout</option>
+</select>
+</form>
+<br>
+	<input type="text" hidden="true" size="40" class="form-control" id="addItem5" placeholder="Add new info..." /><br>
+				<button class="button" hidden="true" type="submit" onclick="addListItem(5)" id="add5" >Add</button>
+<button class="button" onclick="myFunction(5)" hidden="true" id="remove5">Remove selected Info</button><br>
+<br>
+<div align="right"><button hidden="true" class="button" id="done" onClick="done()">Done</button></div>
+
+
+
+</body>
+</html>

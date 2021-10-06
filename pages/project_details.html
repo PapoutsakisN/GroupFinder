@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AVL Trees Project</title>
+<img src="Logo.jpg" >
+<link rel="stylesheet" type="text/css" href="mystyle.css"
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+ <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+span.tab{
+	 display: block;
+    width: 480px;
+	color:black;
+	text-align:right;
+	background-color:#F7F7F7;
+    padding: 4px;
+
+	}
+a.tab:link, a.tab:visited {
+    display: block;
+    width: 144px;
+    font-weight: bold;
+    color: black;
+	background-color:#F7F7F7;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a.tab1:link, a.tab1:visited {
+    display: block;
+    width: 70px;
+    font-weight: bold;
+    color: orange;
+	background-color:#F7F7F7;
+    text-align: right;
+    padding: 4px;
+    text-decoration: none;
+}
+
+a.tab:hover, a.tab:active {
+    background-color: #E89000;
+	color:white;
+}
+</style>
+   <ul>
+  <li><a class="tab" href="Projects.html">Projects</a></li>
+  <li><a class="tab" href="Profile.html">Profile</a></li>
+  <li><a class="tab" href="Mygroups.html">MyGroups</a></li>
+  <li><a class="tab" href="Notifications.html">Notifications</a></li>
+  <li><a class="tab" href="Help.html">Help</a></li>
+  
+  <li><span class="tab">Connected as:Papoutsakis N.</span></li>
+  <li><a class="tab1" href="../Index.html">Sign Out</a></li>
+</ul>
+
+
+
+<script>
+  	function addListItem() {
+		
+  			var string=document.getElementById("addItem1").value;
+			var int=document.getElementById("addItem2").value;
+  			var int2=document.getElementById("addItem3").value;
+			
+			var myList = document.getElementById("mySelect1");
+			
+			document.getElementById("addItem2").value="";
+			document.getElementById("addItem3").value="";
+			if(int2 >= 0 && int2 <= 5 && int>=1990 && int<=2016){
+						document.getElementById("addItem1").value="";
+
+			$("#mySelect1").append('<option>  ' + string  +  '&nbsp&nbsp&nbsp&nbsp Rating:  '+int2+'/5'+'&nbsp&nbsp&nbsp&nbspAttendance Year:  '+int +'  </option>').listview("refresh");
+			
+myList.innerHTML = '';
+			$("#mySelect1").append('<option>   ' + string  + '&nbsp&nbsp&nbsp&nbsp   Rating     '+int2+'/5'+'&nbsp&nbsp&nbsp&nbsp Attendance Year:'+int +'   </option>').listview("refresh");
+			}
+		
+			
+			
+		
+	}
+		</script>
+</head>
+
+<body>
+<p class="Path"><a style="color:#CB2D30" href="Projects.html">Projects</a>&nbsp;>&nbsp;AVL trees project</p>
+<h2 align="center" style="font-family:calibri">AVL Trees Project</h2>
+<div align="right"><a href="project_details_groups.html"><button class="button">Project Groups</button></a></div>
+
+<p class="questions">HY-240b - Data Structures <br>
+Teacher:Fatourou Panagiota<br>
+Valid number of members 4<br>
+Phase &nbsp; &nbsp; Expiration Date<br>
+A &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;   13/3/2015<br>
+B &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;   25/3/2015<br>
+C &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp;   14/3/2015
+</p>
+<h4 class="head" align="right">Description:</h4><p class="answer" align="right"> This project will help to understand the structures and the advantages of using avl trees data structures</p>
+<h4 style="font-family:calibri">Comments & Ratings:</h4><br>
+<form>
+<select id="mySelect1" size="15%"  disabled style="width:80%" >
+  <option >Loidis A. : To project htan arketa dyskolo sxetika me oti didaxthike mesa sto mathima &nbsp&nbsp Rating: 1/5 &nbsp&nbsp Attendance Year: 2013   </option>
+  <option >Danailidi E. : Thewrw oti htan kati poly eukolo sxetika me alles xronies symfwna m' auta pou hksera kai akouga &nbsp&nbsp Rating: 4/5 &nbsp&nbsp Attendance Year: 2011 </option>
+
+</select>
+</form>
+	<input type="text" size="20%" style="width:31.5%" class="form-control" id="addItem1" placeholder=" Comment(e.g. Tade T.: mpla mpla )..." />
+    <input type="text" size="20%" style="width:11%" class="form-control" id="addItem2" placeholder=" AttendYear(e.g. 2014)" />
+    <input type="text" size="20%" style="width:6%" class="form-control" id="addItem3" placeholder=" Rating(1-5)" />
+<button class="button" type="submit" onclick="addListItem()" >Add</button><br/>
+
+</body>
+</html>

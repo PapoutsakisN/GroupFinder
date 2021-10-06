@@ -1,0 +1,40 @@
+<div class="jumbotron">
+	<h2>Welcome to our site!</h2>
+	<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna.</p>
+</div>
+			
+<div class="row">
+
+	<div class="col-md-3">
+					
+		<h4>Search Users</h4>
+		
+		<form>
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search" ng-model="userSearch">
+				<span class="input-group-addon glyphicon glyphicon-search"></span>
+			</div><br/>
+			<button type="submit" class="btn btn-primary" ng-click="userSearch=''"><i class="fa fa-trash"></i> Clear Search</button>
+		</form>
+		
+		<br/>
+		
+		<h4>Add User</h4>
+		
+		<form>
+			<input type="text" class="form-control" id="firstname" placeholder="First Name" ng-model="first"><br/>
+			<input type="text" class="form-control" id="lastname" placeholder="Last Name" ng-model="last"><br/>
+			<button type="submit" class="btn btn-primary" ng-click="addUser(first, last)"><i class="fa fa-plus"></i> Add</button>
+		</form>
+		
+	</div>
+	
+	<div class="col-md-9">
+		<div class="list-group">
+			<a href="#" class="list-group-item" ng-repeat="user in users | orderBy:'firstname' | filter: userSearch">
+				<h4 class="list-group-item-heading">{{user.firstname + ' ' + user.lastname }}</h4>
+				<p class="list-group-item-text">{{user.description}}</p>
+			</a>
+		</div>
+	</div>
+</div>

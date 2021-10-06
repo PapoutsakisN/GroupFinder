@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AVL groups</title>
+
+<img src="Logo.jpg" >
+<link rel="stylesheet" type="text/css"  href="mystyle.css">
+ <style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+div.bet{
+	display:block;
+	width:50px;
+}
+div.prList{
+	display:block;
+	width:850px;
+		}
+div.signin{
+	display:block
+	width:124;
+	}
+span.tab{
+	 display: block;
+    width: 480px;
+	color:black;
+	text-align:right;
+	background-color:#F7F7F7;
+    padding: 4px;
+
+	}
+a.tab:link, a.tab:visited {
+    display: block;
+    width: 144px;
+    font-weight: bold;
+    color: black;
+	background-color:#F7F7F7;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+a.tab1:link, a.tab1:visited {
+    display: block;
+    width: 70px;
+    font-weight: bold;
+    color: orange;
+	background-color:#F7F7F7;
+    text-align: right;
+    padding: 4px;
+    text-decoration: none;
+}
+
+a.tab:hover, a.tab:active {
+    background-color: #E89000;
+	color:white;
+}
+</style>
+   <ul>
+  <li><a class="tab" href="../Index.html">Projects</a></li>
+  <li><a class="tab" href="Message.html">Profile</a></li>
+  <li><a class="tab" href="Message.html">MyGroups</a></li>
+  <li><a class="tab" href="Message.html">Notifications</a></li>
+  <li><a class="tab" href="Help1.html">Help</a></li>
+  
+  <li><span class="tab1">&nbsp;</span></li>
+  <li><span class="tab">&nbsp;</span></li>
+</ul>
+
+<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+<script>
+
+function addNewComment(){
+	var string=document.getElementById("comm_add").value;
+	var myList = document.getElementById("commentss");
+	document.getElementById("comm_add").value="";
+	
+	$("#commentss").append('<option>' + string + '</option>').listview("refresh");
+	myList.innerHTML = '';
+	$("#commentss").append('<option>' + string + '</option>').listview("refresh");
+	}
+</script>
+<script>
+var counter=0;
+
+function check(){
+	document.getElementById("all_details").hidden=true;
+	document.getElementById("list").hidden=false;
+	document.getElementById("create_new_group").hidden=false;
+	document.getElementById("path").hidden=true;
+	
+	}
+function open_details(flag){
+	document.getElementById("all_details").hidden=false;
+	document.getElementById("list").hidden=true;
+	document.getElementById("create_new_group").hidden=true;
+		document.getElementById("path").hidden=false;
+	var names=['<a href="eeee.html"><p>Paravoliashs Andreas</p></a>',
+	'<a href="eeee.html"><p>Papoutsakis Nikos</p></a>',
+	'<a href="eeee.html"><p>Meles kwnstantikos </p></a>'];
+	if(flag==1){
+		var array=document.getElementById("group01").innerHTML.toString();
+		var x=array.split("\n");
+	document.getElementById("det_names").innerHTML=names[0]+names[1];
+	document.getElementById("det_out_req_list").innerHTML=names[2];
+	document.getElementById("path").innerHTML="->group"+x[0][12]+x[0][13];
+	}
+	if(flag==2){
+	var array=document.getElementById("group02").innerHTML.toString();
+		var x=array.split("\n");
+			document.getElementById("det_names").innerHTML=names[0]+names[1]+names[2];
+	document.getElementById("path").innerHTML="->group"+x[0][11]+x[0][12];
+
+	}
+	if(flag==3){
+	var array=document.getElementById("group03").innerHTML.toString();
+		var x=array.split("\n");
+			document.getElementById("det_names").innerHTML=names[0]+names[2];
+	document.getElementById("det_out_req_list").innerHTML=names[1];
+	document.getElementById("path").innerHTML="->group"+x[0][11]+x[0][12];
+
+	}
+	if(flag==4){
+	var array=document.getElementById("group04").innerHTML.toString();
+		var x=array.split("\n");
+					document.getElementById("det_names").innerHTML=names[0]+names[1]+names[2];
+	document.getElementById("path").innerHTML="->group"+x[0][11]+x[0][12];
+
+	}
+	if(flag==5){
+	var array=document.getElementById("group05").innerHTML.toString();
+		var x=array.split("\n");
+					document.getElementById("det_names").innerHTML=names[0]+names[1];
+	document.getElementById("path").innerHTML="->group"+x[0][11]+x[0][12];
+
+	}
+	
+	if(flag==6){
+		var text=document.getElementById("mySelect1").value;
+		document.getElementById("det_title").innerHTML=text+"-group"+document.getElementById("text1").innerHTML;
+		document.getElementById("det_m_o_group").innerHTML=document.getElementById("text3").innerHTML;
+	document.getElementById("det_proj_name").innerHTML="Members of the group:1/"+document.getElementById("text2").innerHTML;
+	document.getElementById("det_names").innerHTML=names[1];
+	document.getElementById("path").innerHTML="->group"+document.getElementById("text1").innerHTML;
+	
+	}
+	document.getElementById("det_title").innerHTML=x[0];
+	document.getElementById("det_proj_name").innerHTML=x[1];
+	document.getElementById("det_m_o_group").innerHTML=x[2];
+	
+		
+	
+	}
+
+function go_on_create(){
+	document.getElementById("create").hidden=false;
+	document.getElementById("list").hidden=true;
+	document.getElementById("create_new_group").hidden=true;
+	document.getElementById("path").innerHTML="->create new group";
+	document.getElementById("path").hidden=false;
+	}
+function add_paragraph(){
+	var id;
+	if(document.getElementById("text1").innerHTML!="auto-complete"){
+	document.getElementById("create").hidden=true;
+	document.getElementById("list").hidden=false;
+	document.getElementById("create_new_group").hidden=false;
+	document.getElementById("chech_valid").hidden=true;
+	counter=counter+1;
+	id=document.getElementById("text1").innerHTML;
+	document.getElementById("list").innerHTML ='<p onclick="open_details(6)">'+
+	document.getElementById("mySelect1").value+'-group'+id+'<br>'+document.getElementById("text3").innerHTML +'<br>Members of the group:1/'+document.getElementById("text2").innerHTML+'<br>User Status:<span>Creator</span>'+'</p>' + document.getElementById("list").innerHTML;
+	}else{
+		document.getElementById("chech_valid").hidden=false;
+		
+		}
+		document.getElementById("path").hidden=true;
+	}
+function auto_complete(){
+	var text=document.getElementById("mySelect1").value;
+	var array=["HY-464","02","3","Web Design project",
+			   "HY-424","12","2","Computer Architecture project",
+			   "HY-456","08","2","Virtual Design project",
+			   "HY-335","13","3","Computer Networks projects",
+			   "HY-356","40","6","Web Programming project",
+			   "HY-240b","20","4","Avl trees project"
+	];
+	if(array[0]==text){
+	document.getElementById("text1").innerHTML=array[1];
+	document.getElementById("text2").innerHTML=array[2];
+	document.getElementById("text3").innerHTML=array[3];
+	}
+	if(array[4]==text){
+	document.getElementById("text1").innerHTML=array[5];
+	document.getElementById("text2").innerHTML=array[6];
+	document.getElementById("text3").innerHTML=array[7];
+	}
+	if(array[8]==text){
+	document.getElementById("text1").innerHTML=array[9];
+	document.getElementById("text2").innerHTML=array[10];
+	document.getElementById("text3").innerHTML=array[11];
+	}
+	if(array[12]==text){
+	document.getElementById("text1").innerHTML=array[13];
+	document.getElementById("text2").innerHTML=array[14];
+	document.getElementById("text3").innerHTML=array[15];
+	}
+	if(array[16]==text){
+	document.getElementById("text1").innerHTML=array[17];
+	document.getElementById("text2").innerHTML=array[18];
+	document.getElementById("text3").innerHTML=array[19];
+	}
+	if(array[20]==text){
+	document.getElementById("text1").innerHTML=array[21];
+	document.getElementById("text2").innerHTML=array[22];
+	document.getElementById("text3").innerHTML=array[23];
+	}
+	}
+function JoinRequest(flag){
+	if(flag == 1){
+	document.getElementById("text2").innerHTML.replace("members: 14","members: 15");
+	document.getElementById("Join1").hidden=true;
+	}
+	if(flag == 2){
+	document.getElementById("text2").innerHTML.replace("members: 6","members: 7");
+	document.getElementById("Join2").hidden=true;
+	}
+	if(flag == 3){
+	document.getElementById("text2").innerHTML.replace("members: 4","members: 5");
+	document.getElementById("Join3").hidden=true;
+	}
+	}	
+</script>
+
+</head>
+
+<body >
+<div >
+<p class="Path" onClick="check()" ><a style="color:#C46609" href="../Projects">Projects</a>&nbsp;>&nbsp;<a style="color:#C46609" href="../project_details"> AVL Trees</a><span id="path" hidden="true"></span></p>
+</div>
+<ul>
+<li style="background-image:url(Log%20In.jpg)">
+<br><br>
+<p style="margin:inherit">&nbsp;Email:</p>
+<input type="email" placeholder="example@csd.uoc.gr">
+<p style="margin:inherit">&nbsp;Password:</p>
+<input type="password" placeholder="password"><br>
+<div align="right"><a href="Projects.html"><button class="button">Sign In</button></a>
+</div><br>
+</li>
+<li>
+<div class="bet">&nbsp;</div>
+</li>
+<li>
+<div align="right"><button class="button" hidden="true" id="create_new_group" onclick="go_on_create()">create new group</button>
+</div>
+<div id="list">
+
+<p class="question"  onClick="open_details(1)" id="group01">Group01 <br>
+Creator: Papageorgiou Christoforos<br>
+Members of the group:1/2<br>
+Non-accepted members: 14 
+</p>
+<div align="right"><button hidden="true" class="button"  id="Join1" onClick="JoinRequest(1)" >Join Request</button></div>
+<p class="question" onClick="open_details(2)" id="group02">Group02 <br>
+Creator: Loizou Evaggelia<br>
+Members of the group:2/2<br>
+Non-accepted members: 10
+</p>
+
+<p class="question" onClick="open_details(3)" id="group03">Group03 <br>
+Creator: Dimitriadou Vassiliki<br>
+Members of the group:2/2<br>
+Non-accepted members: 5
+</p>
+<p class="question" onClick="open_details(4)" id="group04">Group04 <br>
+Creator: Paravoliasis Andreas<br>
+Members of the group:1/2<br>
+Non-accepted members: 6
+</p>
+<div align="right"><button class="button" hidden="true"  id="Join2" onClick="JoinRequest(2)">Join Request</button></div>
+<p class="question" onClick="open_details(5)"  id="group05">Group05 <br>
+Creator: Georgiadis Panagiotis<br>
+Members of the group:1/2<br>
+Non-accepted members: 4
+</p>
+
+<div align="right"><button class="button" hidden="true"  id="Join3" onClick="JoinRequest(3)">Join Request</button></div>
+
+</div>
+
+<div id="create" hidden="true">
+	  <form>
+choose a subject code:
+<select id="mySelect1" size="1" onChange="auto_complete()"  >
+  <option>HY-464</option>
+  <option>HY-424</option>
+  <option>HY-456</option>
+  <option>HY-335</option>
+  <option>HY-356</option>
+  <option>HY-240b</option>
+</select>
+</form>
+	<p>Groups Id: <p id="text1" >auto-complete</p></p>
+    <p>Groups max members: <p id="text2" >auto-complete</p></p>
+    <p>Projects title : <p id="text3" >auto-complete</p></p>
+    <button class="button" type="submit" id="add_new" onClick="add_paragraph()" >Done</button>
+	<p hidden="true" id="chech_valid">choose a valid subject code</p>
+ 	</div>
+    
+    
+    <div id="all_details" hidden="true">
+    <p align="center" style="font-family:calibri" style="font-size:24px" id="det_title">eee</p>
+    <p class="question" id="det_proj_name"></p>
+    <p class="question" id="det_m_o_group"></p>
+    <p class="answer" id="det_names"></p>
+    <p class="question" id="det_out_req">Outstanding requests:</p>
+    <p class="answer" id="det_out_req_list"></p>
+    <div>
+    <p class="question" id="det_com">Comments</p>
+    <form>
+<select id="commentss" size="15%"  disabled style="width:50%" >
+  <option>leave a comment</option>
+
+
+</select>
+</form>
+	<input type="text" size="20%" style="width:50%"  id="comm_add" placeholder=" comment..." />
+   
+<button class="button" type="submit" onclick="addNewComment()" >Add</button><br/>
+    </div>
+</div>
+</li>
+</body>
+</html>

@@ -1,0 +1,23 @@
+body {
+	background-color: #F0F0F0;
+}
+
+.container {
+	background-color: #fff;
+}
+
+.header{
+	background-color: #337ab7;
+	color: #fff;
+	padding: 5px 25px 15px 25px;
+}
+
+.main {
+	padding: 25px;
+}
+
+.footer{
+	background-color: #414237;
+	color: #fff;
+	padding: 15px 25px 5px 25px;
+}
